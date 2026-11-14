@@ -2,8 +2,9 @@
 //
 //   demo    scripts/serve.mjs --demo runs a relay on this machine that signs for the demo
 //           community's accounts. The page only says which member and which action.
-//   wallet  a NEAR wallet, through near-connect (web/vendor/near-connect.js), if that
-//           bundle is present. The wallet signs each call itself.
+//   wallet  a NEAR wallet, through near-connect (web/vendor/near-connect.js), in a copy of
+//           the site that ships that bundle and sets "wallet": true in deployment.json.
+//           The wallet signs each call itself. This repository's copy does not ship it.
 
 import { config } from "./chain.js";
 
@@ -29,7 +30,7 @@ export const session = {
       this.me = this.people.some((p) => p.id === saved) ? saved : null;
       return;
     }
-    await this.initWallet(c);
+    if (c.wallet) await this.initWallet(c);
   },
 
   /** Load the wallet connector if this copy of the site ships it. */

@@ -1,0 +1,52 @@
+Ovation, on a DAO of your own
+  you          ovation-judge.testnet
+  contract     v1.ovation-hq.testnet
+  your DAO     ovt-ovationjudge-ayw9r.sputnikv2.testnet
+
+1. Three named accounts under yours
+   ana.ovation-judge.testnet (a member) already there
+   ben.ovation-judge.testnet (a member) already there
+   cy.ovation-judge.testnet (not a member) already there
+
+2. A Sputnik DAO with you as its council
+   created https://testnet.nearblocks.io/txns/6zGY6yrQheb6NsGr3mZ3DKVJ396ULdQQ2gaUNXhrscZ
+   sent 0.4 NEAR to its treasury https://testnet.nearblocks.io/txns/Dx4soKAFsmnHvYyur3SYLXup3AMnt7USZLWo3iixTPcB
+
+3. You pass the two proposals that install Ovation
+   proposal #0: role "ovation" holding only ovt-ovationjudge-ayw-2cd7.v1.ovation-hq.testnet, with transfer:AddProposal, transfer:VoteApprove, transfer:Finalize https://testnet.nearblocks.io/txns/7DujAt5ee4zLZyhwr2fj6Z5UqwangE59cNKpyAEbpKTu
+   proposal #1: stage opened, 0.05 NEAR per one-minute round https://testnet.nearblocks.io/txns/CpVvJw2foot8gHw9iZsgNHtA4hUsatvRepvq38hNypaU
+   your stage's own account ovt-ovationjudge-ayw-2cd7.v1.ovation-hq.testnet exists with 0.0471 NEAR for bonds and 0 access keys
+   the contract read your DAO's policy: 3 may applaud (ana, ben, ovation-judge), and your stage's account can file and approve small transfers, and nothing else
+
+4. Applause
+   ovation-judge gave cy 1 clap: "Showed up every week" https://testnet.nearblocks.io/txns/4KTY4HbLsahd1sxHWN2UCQz2JFWiGENuPxAKbLsyxpaM
+   ben gave cy 2 claps: "Wrote the docs everyone links to" https://testnet.nearblocks.io/txns/4ZefJVQb4fkRdDUjY6UDXmp4m1xVHRvW7a92WUYtfkCb
+   ana gave cy 2 claps: "Fixed the build on a Sunday" https://testnet.nearblocks.io/txns/AjxXq6HxPHBpkVsdpRN3zEoXAzLjE2syU4ki3CGyYaeq
+   ana tried to applaud themselves: ERR_SELF: you cannot applaud yourself
+   round 0: cy has 5 claps from 3 members, worth 0.05 NEAR, sign-off: Auto
+
+5. Your stage's posts
+   author ovt-ovationjudge-ayw-2cd7.v1.ovation-hq.testnet, written to social.testnet:
+     👏 @cy.ovation-judge.testnet got 1 clap from @ovation-judge.testnet at Try it.
+     “Showed up every week”
+     Round 0 of @ovt-ovationjudge-ayw9r.sputnikv2.testnet #ovation
+   https://kv.test.fastnear.com/v0/latest/social.testnet/ovt-ovationjudge-ayw-2cd7.v1.ovation-hq.testnet/post%2F1794412707549
+
+6. The round closes, and one call files the payout and votes for it
+   waiting 41 s for round 0 to close
+   claim returned "Voted" for 22.09 Tgas https://testnet.nearblocks.io/txns/J829iUsVkzvscPd1tmx3psuUjaomAcUkYiLkXZ4UKB7J
+   on your DAO it is proposal #2, a Transfer of 0.05 NEAR to cy.ovation-judge.testnet
+   votes on it: {"ovt-ovationjudge-ayw-2cd7.v1.ovation-hq.testnet":"Approve"}
+
+7. Your DAO pays
+   settle says: Approved https://testnet.nearblocks.io/txns/EMBPXwq2DDJkKvpLxtaARq1yNffTofGQZofx2MSzc53d
+   settle says: Paid https://testnet.nearblocks.io/txns/27jSM4YsgS8imHJAS7AneHm1vvf4h4etJZQqC2R72yVE
+   cy.ovation-judge.testnet held 0.2 NEAR and now holds 0.25: +0.05, exactly the amount on the board: true
+   their record: 5 claps from 3 different members, paid in 1 round, trusted: true
+
+Done. Look for yourself:
+  your DAO      https://testnet.nearblocks.io/address/ovt-ovationjudge-ayw9r.sputnikv2.testnet
+  your stage    https://testnet.nearblocks.io/address/ovt-ovationjudge-ayw-2cd7.v1.ovation-hq.testnet
+  the recipient https://testnet.nearblocks.io/address/cy.ovation-judge.testnet
+  the contract  https://testnet.nearblocks.io/address/v1.ovation-hq.testnet
+To uninstall, pass one proposal of kind ChangePolicyRemoveRole with role "ovation".

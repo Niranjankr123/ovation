@@ -1,0 +1,9 @@
+[package]
+name = "ovation-agent"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+description = "A stage's own account. It holds the stage's NEAR and acts in its DAO, and only the Ovation contract above it can make it act."
+
+[lib]
+crate-type = ["cdylib"]

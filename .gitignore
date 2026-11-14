@@ -1,0 +1,9 @@
+node_modules/
+contract/target/
+data/raw/
+demo/out/
+__pycache__/
+.claude/
+*.env
+.env*
+deployments/*.partial.json

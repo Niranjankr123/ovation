@@ -1,0 +1,40 @@
+{
+  "network": "testnet",
+  "contract": "v1.ovation-hq.testnet",
+  "social": "social.testnet",
+  "dao": "lantern-guild.sputnikv2.testnet",
+  "agent": "lantern-guild-7796.v1.ovation-hq.testnet",
+  "label": "Lantern Guild",
+  "namespace": "lantern-guild.testnet",
+  "council": [
+    "asha.lantern-guild.testnet",
+    "diego.lantern-guild.testnet",
+    "mei.lantern-guild.testnet"
+  ],
+  "members": [
+    "noor.lantern-guild.testnet",
+    "kofi.lantern-guild.testnet",
+    "sana.lantern-guild.testnet",
+    "leo.lantern-guild.testnet"
+  ],
+  "guests": [
+    "ravi.lantern-guild.testnet",
+    "june.lantern-guild.testnet"
+  ],
+  "code": {
+    "bytes": 336697,
+    "sha256": "5eecbcd140b447ad501f06132ee3d2a267336394aa7dfac2289bec69f2763e3d"
+  },
+  "explorer": {
+    "contract": "https://testnet.nearblocks.io/address/v1.ovation-hq.testnet",
+    "dao": "https://testnet.nearblocks.io/address/lantern-guild.sputnikv2.testnet",
+    "agent": "https://testnet.nearblocks.io/address/lantern-guild-7796.v1.ovation-hq.testnet"
+  },
+  "transactions": {
+    "stage": [
+      "https://testnet.nearblocks.io/txns/4GBLBoeCsw19YeLK7Sdr3r2xBKtb9pQegqhVjhK2q1Rv",
+      "https://testnet.nearblocks.io/txns/CNDKKskBtBdEGZCETuDi4xWFj7a5Xp8MTk6CVoTavXcL",
+      "https://testnet.nearblocks.io/txns/A91zfhyT8ekvzdq7Qt8atqXjbry3cKEzbJrEsZ8SRqGp"
+    ]
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "ran_at": "2026-11-11T16:18:48.398Z",
+  "contract": "v1.ovation-hq.testnet",
+  "dao": "lantern-guild.sputnikv2.testnet",
+  "rounds": {
+    "A": 10,
+    "B": 13,
+    "C": 15,
+    "D": 17
+  },
+  "passed": 81,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "the stage is open and the DAO's policy gives the contract exactly what it needs",
+      "ok": true,
+      "detail": "role ovation",
+      "link": null
+    },
+    {
+      "name": "the stage's own account exists, has no keys, and runs the 1.4 KB stage contract",
+      "ok": true,
+      "detail": "lantern-guild-7796.v1.ovation-hq.testnet, code GKUz57qSin...",
+      "link": null
+    },
+    {
+      "name": "only the Ovation contract can make the stage's account act",
+      "ok": true,
+      "detail": "a call from a council member is refused",
+      "link": null
+    },
+    {
+      "name": "the DAO role holding the stage's account has three transfer permissions and nothing else",
+      "ok": true,
+      "detail": "transfer:AddProposal transfer:Finalize transfer:VoteApprove",
+      "link": null
+    },
+    {
+      "name": "anyone can add NEAR to a stage's prepaid storage",
+      "ok": true,
+      "detail": "+0.4 NEAR, now 0.8492",
+      "link": "https://testnet.nearblocks.io/txns/89zBD8Q3TwBBQsJMUwf6FBxVmd6UW1Ho4axk61WxRwcu"
+    },
+    {
+      "name": "nobody can applaud themselves",
+      "ok": true,
+      "detail": "ERR_SELF: you cannot applaud yourself",
+      "link": "https://testnet.nearblocks.io/txns/CGT6V4cGmqcUGrqno14WLbsLuQUtv96idzk3ts5rdiAv"
+    },
+    {
+      "name": "the DAO itself cannot be applauded",
+      "ok": true,
+      "detail": "ERR_RECIPIENT: the DAO and this contract cannot be applauded",
+      "link": "https://testnet.nearblocks.io/txns/DPU7PhA3n4C6SVN7tEpwiL8VeUfJ5eT1SfTmrUgmweaG"
+    },
+    {
+      "name": "a note cannot carry a link",
+      "ok": true,
+      "detail": "ERR_NOTE_LINK: a note cannot contain a link or a web address",
+      "link": "https://testnet.nearblocks.io/txns/GJguffkqpanfesfS1zA3wxNAPBgSuiuW9bQbJFNQtvmL"
+    },
+    {
+      "name": "more claps than the round's allowance are refused",
+      "ok": true,
+      "detail": "ERR_ALLOWANCE: not enough claps left this round",
+      "link": "https://testnet.nearblocks.io/txns/8ouxJXQcZJDWxafWrBpuTHM2Jpyoaax5uUr5miEyAEZq"
+    },
+    {
+      "name": "a quote must be a near.social post reference",
+      "ok": true,
+      "detail": "ERR_QUOTE: quote must be a near.social post, written account/post_id",
+      "link": "https://testnet.nearblocks.io/txns/F9fTStNwZiFkY5YGikBE8yA5UD9PD9BEt7QMLWvJdgN7"
+    },
+    {
+      "name": "someone outside the DAO's roles cannot applaud",
+      "ok": true,
+      "detail": "ERR_NOT_A_MEMBER: only members of the stage's roles can applaud; call sync_members if the ",
+      "link": "https://testnet.nearblocks.io/txns/qTjbfU865rL1qnm4pDo8g24wFyy3avmpbvgTkrm3JbY"
+    },
+    {
+      "name": "there is nothing to withdraw before applauding",
+      "ok": true,
+      "detail": "ERR_NOTHING: there is no applause to withdraw",
+      "link": "https://testnet.nearblocks.io/txns/8g494CoLspx6rW1aWWs5qDuHaHVVgfnKsoC8Wj4xYE5M"
+    },
+    {
+      "name": "a note cannot mention an account",
+      "ok": true,
+      "detail": "ERR_NOTE_MENTION: a note cannot contain @, because the post would notify that account",
+      "link": "https://testnet.nearblocks.io/txns/5RAhygvTcy8ryKRnjbGx26Aiv9uZ26RVsfPVqjxF11xf"
+    },
+    {
+      "name": "a note cannot break out of its quotation marks",
+      "ok": true,
+      "detail": "ERR_NOTE_QUOTE: a note cannot contain double quotes; the post puts them around it",
+      "link": "https://testnet.nearblocks.io/txns/96cxJR3AEcHddktALhbw4JtSKyM9raamDRUJYyT8shdu"
+    },
+    {
+      "name": "a note cannot point to a web address, even without https",
+      "ok": true,
+      "detail": "ERR_NOTE_LINK: a note cannot contain a link or a web address",
+      "link": "https://testnet.nearblocks.io/txns/G552CagDU36vAvLMVPjaGPCmjX3YRHTnB4ZqjHmtynj1"
+    },
+    {
+      "name": "applause can quote only a post by the recipient or the giver",
+      "ok": true,
+      "detail": "ERR_QUOTE: quote a post by the person you applaud, or your own",
+      "link": "https://testnet.nearblocks.io/txns/HHxMvwfHcRPyqXFKbjLXffQ7kThMnWhL9VaufS9wtPMh"
+    },
+    {
+      "name": "twelve pieces of applause are accepted, each for under 10 Tgas",
+      "ok": true,
+      "detail": "at most 7.55 Tgas",
+      "link": "https://testnet.nearblocks.io/txns/3TnarGhxCgwttMZNHXfPjVU5MHnSS5mXvMhuZEgLyvrN"
+    },
+    {
+      "name": "changing applause moves the score, and changing it back restores it exactly",
+      "ok": true,
+      "detail": "49999960234225 -> 62298170340561 -> 49999960234225",
+      "link": null
+    },
+    {
+      "name": "withdrawn applause leaves the tally, and giving it again brings it back",
+      "ok": true,
+      "detail": "1 backer, then 2",
+      "link": null
+    },
+    {
+      "name": "every score and amount equals (sum of square roots) squared, pro rata, capped",
+      "ok": true,
+      "detail": "ravi 0.05, june 0.02285, kofi 0.00571, asha 0",
+      "link": null
+    },
+    {
+      "name": "a round's amounts never add up to more than its budget",
+      "ok": true,
+      "detail": "0.07857 of 0.1",
+      "link": null
+    },
+    {
+      "name": "breadth beats volume: ten claps from five members score ten times five claps from one",
+      "ok": true,
+      "detail": "49999960234225 vs 4999995628489",
+      "link": null
+    },
+    {
+      "name": "one recipient cannot take more than the share cap",
+      "ok": true,
+      "detail": "0.05",
+      "link": null
+    },
+    {
+      "name": "one backer is not enough: applause from a single member earns nothing",
+      "ok": true,
+      "detail": "1 backer",
+      "link": null
+    },
+    {
+      "name": "a member who is not a steward cannot void applause",
+      "ok": true,
+      "detail": "ERR_NOT_A_STEWARD: only members of the stage's steward roles can void applause",
+      "link": "https://testnet.nearblocks.io/txns/9GrU1ZbnL9GyF1jx2sH2jvgJ2k2xRuVWWFPAWvEXJiJ7"
+    },
+    {
+      "name": "voiding needs a reason",
+      "ok": true,
+      "detail": "ERR_REASON: say why this applause is struck out",
+      "link": "https://testnet.nearblocks.io/txns/JAKWYoFQ2JfiXgkD3JkG8E8WFgQ5NVyyW4FNdZacoYyx"
+    },
+    {
+      "name": "a steward can strike out applause, and the reason and their name are public",
+      "ok": true,
+      "detail": "Thanks for the council lead belongs in the next retro, not here",
+      "link": "https://testnet.nearblocks.io/txns/FR7gRcMBa2KM7r1QtG9KdgGz6kvHLWMxUQ9jkCBZqnfC"
+    },
+    {
+      "name": "struck-out applause cannot be changed",
+      "ok": true,
+      "detail": "ERR_VOIDED: a steward struck out this applause; it cannot be changed this round",
+      "link": "https://testnet.nearblocks.io/txns/AhZLKBtD1xf3gUszrzpDKZ6mKXMdwXAJtdMYpeU9sx5M"
+    },
+    {
+      "name": "the claps of struck-out applause are not handed back",
+      "ok": true,
+      "detail": "6 used",
+      "link": null
+    },
+    {
+      "name": "each applause is a near.social post whose author is the stage's own account",
+      "ok": true,
+      "detail": "11 of 11 posts indexed at https://kv.test.fastnear.com",
+      "link": null
+    },
+    {
+      "name": "a post mentions the recipient and the giver, and carries the note",
+      "ok": true,
+      "detail": "👏 @ravi.lantern-guild.testnet got 2 claps from @asha.lantern-guild.testnet at Lantern Guild.",
+      "link": null
+    },
+    {
+      "name": "applause for a near.social post by the recipient quotes that post",
+      "ok": true,
+      "detail": "june.lantern-guild.testnet/1759140000000",
+      "link": null
+    },
+    {
+      "name": "voiding takes the post down",
+      "ok": true,
+      "detail": "tombstone written",
+      "link": null
+    },
+    {
+      "name": "a payout cannot be claimed while its round is open",
+      "ok": true,
+      "detail": "ERR_ROUND_OPEN: this round has not ended",
+      "link": "https://testnet.nearblocks.io/txns/HxrrGBve2jGyPgLifu5YuVMcP8DorRsTRBdK6aYGvenY"
+    },
+    {
+      "name": "a payout cannot be claimed during the review window",
+      "ok": true,
+      "detail": "ERR_IN_REVIEW: claims open when the review window ends",
+      "link": "https://testnet.nearblocks.io/txns/2NsA9nSJUPWdrZXjLQsmZGTKb9acARaFxgXVX57chohr"
+    },
+    {
+      "name": "voiding is over once the review window has ended",
+      "ok": true,
+      "detail": "ERR_TOO_LATE: applause can be voided only until the review window ends",
+      "link": "https://testnet.nearblocks.io/txns/5DC3rKp3s8KDaccc1USX8VMPbrALEDhiF981HDiPdsap"
+    },
+    {
+      "name": "an account with too few backers cannot claim",
+      "ok": true,
+      "detail": "ERR_TOO_FEW_BACKERS: not enough different members applauded this account in this round",
+      "link": "https://testnet.nearblocks.io/txns/C9FLvgs29VyYUusWQ9MG4eroBdUHEGxxjPTDs8rz1crr"
+    },
+    {
+      "name": "a claim without enough gas for the whole chain is refused up front",
+      "ok": true,
+      "detail": "ERR_GAS: attach at least 110 Tgas",
+      "link": "https://testnet.nearblocks.io/txns/t6nnUiGXfe4t4ynS6x3bnKmFo3C5aoE5WgAHLSpyZGa"
+    },
+    {
+      "name": "a small payout is filed and voted for in one call, for about 30 Tgas",
+      "ok": true,
+      "detail": "22.22 Tgas, proposal #34",
+      "link": "https://testnet.nearblocks.io/txns/w2bfBpPPTy844VdCjg7XGSyCEYTcMceeTQsHkKkSL12"
+    },
+    {
+      "name": "on the DAO it is an ordinary Transfer proposal, filed by the stage's account, whose vote is the only one",
+      "ok": true,
+      "detail": "{\"lantern-guild-7796.v1.ovation-hq.testnet\":\"Approve\"}",
+      "link": null
+    },
+    {
+      "name": "its description is in the form Trezu reads as a payment request",
+      "ok": true,
+      "detail": "* Title: Ovation round 10 for kofi.lantern-guild.testnet <br>* Summary",
+      "link": null
+    },
+    {
+      "name": "the same payout cannot be claimed twice",
+      "ok": true,
+      "detail": "ERR_CLAIMED: this payout was already filed",
+      "link": "https://testnet.nearblocks.io/txns/B5BY57fWSjpX5BWD7CDNJ3xMfF2kdwi4GmwXshwQvZXf"
+    },
+    {
+      "name": "a mid-size payout is filed and left unvoted",
+      "ok": true,
+      "detail": "0.02285 NEAR",
+      "link": "https://testnet.nearblocks.io/txns/EWe6jrTfDzwXYWPHHgsagGqc5DTRYNkLKopiDQLT2qz4"
+    },
+    {
+      "name": "a member who is not a steward cannot co-sign",
+      "ok": true,
+      "detail": "ERR_NOT_A_STEWARD: only members of the stage's steward roles can co-sign",
+      "link": "https://testnet.nearblocks.io/txns/3yPHuSqfPXU3kHQyTiVU4QvsN6ZQdpwomcparjmfqb4d"
+    },
+    {
+      "name": "a steward who applauded the recipient this round cannot co-sign the payout",
+      "ok": true,
+      "detail": "ERR_CONFLICT: a steward who applauded this account in this round cannot co-sign the payout",
+      "link": "https://testnet.nearblocks.io/txns/61NFkzCGZUe6KabGy5tp49WQSPCp4StZxkauaiLhKa9k"
+    },
+    {
+      "name": "one steward's co-signature is enough: the stage's account then casts the only vote",
+      "ok": true,
+      "detail": "14.72 Tgas",
+      "link": "https://testnet.nearblocks.io/txns/FXjPZFJTnWVBqurj9PNcryZjPSWw6j1UPzD7BJT3fUFk"
+    },
+    {
+      "name": "a large payout becomes a normal DAO proposal",
+      "ok": true,
+      "detail": "0.05 NEAR, proposal #36",
+      "link": "https://testnet.nearblocks.io/txns/5aMUs3JvGS5t8if8dtsWrxfFgNxogVuqxFrXaMh3UtXa"
+    },
+    {
+      "name": "a large payout cannot be co-signed through",
+      "ok": true,
+      "detail": "ERR_WRONG_TIER: only mid-size payouts take a co-signature",
+      "link": "https://testnet.nearblocks.io/txns/EdKy7GStbmUkm5dV9qgNmPuwpnmrQmfwm7xjj5Q7rEmE"
+    },
+    {
+      "name": "calling claim again does not make the contract vote on a council payout",
+      "ok": true,
+      "detail": "ERR_CLAIMED: this payout was already filed and waits for its sign-off",
+      "link": "https://testnet.nearblocks.io/txns/6hgMsXAqEzFoeFK72pbovBBWWsaYCyfJN49T1zqsXb5H"
+    },
+    {
+      "name": "the council passes it by its own votes, and the contract never votes on it",
+      "ok": true,
+      "detail": "asha + diego",
+      "link": null
+    },
+    {
+      "name": "first sight of an approved proposal does not yet count as paid",
+      "ok": true,
+      "detail": "Approved",
+      "link": "https://testnet.nearblocks.io/txns/Hop1RDbcjZmEcq4tXTsZmCN1RAcvdt2k1CB6ZRgi4cPF"
+    },
+    {
+      "name": "all three payouts settle as Paid once the DAO has shown them approved twice",
+      "ok": true,
+      "detail": "kofi Paid, june Paid, ravi Paid",
+      "link": "https://testnet.nearblocks.io/txns/7xomw4DnP55CuWKYwgkViFd4hzbTkfan7vkkAzCycWC3"
+    },
+    {
+      "name": "each recipient's balance rose by exactly the amount on the board",
+      "ok": true,
+      "detail": "kofi +0.00571, june +0.02285, ravi +0.05",
+      "link": null
+    },
+    {
+      "name": "the money came out of the DAO's own account",
+      "ok": true,
+      "detail": "6.37659 -> 6.29802, paid 0.07857",
+      "link": null
+    },
+    {
+      "name": "the round's books match: filed equals paid equals what left the treasury",
+      "ok": true,
+      "detail": "0.07857",
+      "link": null
+    },
+    {
+      "name": "a settled payout has nothing left to settle",
+      "ok": true,
+      "detail": "ERR_SETTLED: this payout has nothing left to settle",
+      "link": "https://testnet.nearblocks.io/txns/2sSY2M6JenLQBrznQJ9sVAo31eETJpCiPWmMYrKYTWG9"
+    },
+    {
+      "name": "each payout is announced in a post by the contract",
+      "ok": true,
+      "detail": "💸 @kofi.lantern-guild.testnet was paid 0.0057 NEAR by @lantern-guild.sputnikv2.testnet for applause from 2 me",
+      "link": null
+    },
+    {
+      "name": "a record is the sum of its lines: every clap traces to a member, a round and a note",
+      "ok": true,
+      "detail": "13 claps over 10 lines",
+      "link": null
+    },
+    {
+      "name": "a member who is not a steward cannot pause the stage",
+      "ok": true,
+      "detail": "ERR_NOT_A_STEWARD: only members of the stage's steward roles can pause it",
+      "link": "https://testnet.nearblocks.io/txns/5qBVcbv5QPxGAG7R9xScHmr9tGg9QxkGvuNCgwDMmo2S"
+    },
+    {
+      "name": "a paused stage takes no applause",
+      "ok": true,
+      "detail": "ERR_PAUSED: a steward paused this stage; the DAO can resume it",
+      "link": "https://testnet.nearblocks.io/txns/Em7vmVC15LG7j7JsLRHvxfJc2ykxBL6rLCx5MpJbWkme"
+    },
+    {
+      "name": "a paused stage files no payouts",
+      "ok": true,
+      "detail": "ERR_PAUSED: a steward paused this stage; the DAO can resume it",
+      "link": "https://testnet.nearblocks.io/txns/HjyiGkksUmZ5ecYvmWcHoXKqd3o3bpciwfY4coAm2miM"
+    },
+    {
+      "name": "a steward cannot lift the pause: only the DAO can",
+      "ok": true,
+      "detail": "ERR_NO_STAGE: that DAO has not opened a stage",
+      "link": "https://testnet.nearblocks.io/txns/4SyVEUmyYqjUZ2zGu1v1xDsWPvqyxv8teALJGgaAMV89"
+    },
+    {
+      "name": "any one steward can pause the stage",
+      "ok": true,
+      "detail": "by diego",
+      "link": "https://testnet.nearblocks.io/txns/FnL8jbGQu3bAXMvSttqCcgXCYV2V1XvRCuDQVeJxvoLx"
+    },
+    {
+      "name": "the DAO resumes it with an ordinary proposal",
+      "ok": true,
+      "detail": "proposal #37",
+      "link": "https://testnet.nearblocks.io/txns/3dYFvtupReVvUZHmGYE2jpNvFRMXC6WDXtjUnrXNBmeE"
+    },
+    {
+      "name": "kofi's second small payout is voted through without anyone signing",
+      "ok": true,
+      "detail": "22.22 Tgas",
+      "link": "https://testnet.nearblocks.io/txns/6wFyHXKqNq9kdtuvRYV5pH6M7L7DGo5ZFWaeAXranWDb"
+    },
+    {
+      "name": "a payout the council votes down settles as Rejected, and nothing is paid",
+      "ok": true,
+      "detail": "proposal #39",
+      "link": "https://testnet.nearblocks.io/txns/KRgDKs8B5GPi4Co5o9vNmd49CKCEVMvJdFUAkz47p71"
+    },
+    {
+      "name": "the DAO hands the proposal bond back to the stage's own account",
+      "ok": true,
+      "detail": "+0.01 NEAR",
+      "link": null
+    },
+    {
+      "name": "after two paid rounds and three different backers, kofi is trusted",
+      "ok": true,
+      "detail": "5 paid rounds, 6 backers",
+      "link": "https://testnet.nearblocks.io/txns/BaTgFPevtnpFd5QUR6BjMwNUzzWiFshTd31ovLpkMmA6"
+    },
+    {
+      "name": "earned trust: the same amount is Auto for a trusted recipient and Cosign for a newcomer",
+      "ok": true,
+      "detail": "0.03673 NEAR each: kofi Auto, diego Cosign",
+      "link": null
+    },
+    {
+      "name": "the trusted recipient's payout goes straight through, the newcomer's waits for a steward",
+      "ok": true,
+      "detail": "kofi Voted, diego Filed",
+      "link": "https://testnet.nearblocks.io/txns/dwm6Zi4FkQwZ4fe4NyeipXM2DLnu9tB71m1LS5AnAPg"
+    },
+    {
+      "name": "a steward cannot co-sign their own payout",
+      "ok": true,
+      "detail": "ERR_OWN_PAYOUT: a steward cannot co-sign their own payout",
+      "link": "https://testnet.nearblocks.io/txns/BfcNf6JfBqCM4pXA4urLVqdZX56ztKSzJQiRQrvjjdsQ"
+    },
+    {
+      "name": "a payout the council removes settles as Removed, proved by the DAO's own empty answer",
+      "ok": true,
+      "detail": "proposal #41 is gone",
+      "link": "https://testnet.nearblocks.io/txns/EPkE17of5Bia9jABf3iagYkUsLYyg5mbUnbgDaSgzJfu"
+    },
+    {
+      "name": "a transfer that bounces is never recorded as paid",
+      "ok": true,
+      "detail": "DAO proposal #42 is Failed",
+      "link": "https://testnet.nearblocks.io/txns/BD6sesYedJFNXQT24rtYnpLwjbVpZDiQXe9heTpiXZKu"
+    },
+    {
+      "name": "the trusted recipient's payout settles as Paid",
+      "ok": true,
+      "detail": "",
+      "link": "https://testnet.nearblocks.io/txns/Bf6x91xeBbQ3JZPYRw6iX1ZXK6Ed78S7j9sPwuXn77i"
+    },
+    {
+      "name": "refused payouts leave the round's books: only live claims count as filed",
+      "ok": true,
+      "detail": "paid 0.03673, filed 0.04489",
+      "link": null
+    },
+    {
+      "name": "a member can name 10 different people in a round and take every clap back",
+      "ok": true,
+      "detail": "10 named, 0 claps in use",
+      "link": null
+    },
+    {
+      "name": "an eleventh person in the same round is refused, even with every clap free again",
+      "ok": true,
+      "detail": "ERR_TOO_MANY_PEOPLE: you have already applauded as many different people this round as you",
+      "link": "https://testnet.nearblocks.io/txns/85bZgRHJJD8zNc6PyF2fxjNXfwEwukS6FLfXmZeDzhmV"
+    },
+    {
+      "name": "applauding someone already named this round is still allowed",
+      "ok": true,
+      "detail": "2 claps",
+      "link": "https://testnet.nearblocks.io/txns/Gws14ekQcTgp27ugpJqMCoGaFjatMNSpeXzrAE2agnnV"
+    },
+    {
+      "name": "only the DAO can change its stage",
+      "ok": true,
+      "detail": "ERR_NO_STAGE: that DAO has not opened a stage",
+      "link": "https://testnet.nearblocks.io/txns/BEVQcvLuwv3QNJMHHy4Rq3pVyp9wrBbRTy7xT9KJKMhE"
+    },
+    {
+      "name": "the stage lists every round that had applause",
+      "ok": true,
+      "detail": "8 rounds",
+      "link": null
+    },
+    {
+      "name": "members never attach a deposit to applaud: storage is charged to the stage's prepaid balance",
+      "ok": true,
+      "detail": "40 entries stored, 0.6067 NEAR left prepaid",
+      "link": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "ovation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Applause that pays: members of a Sputnik DAO applaud each other, and breadth of applause splits a budget the council approved.",
+  "license": "MIT",
+  "scripts": {
+    "site": "node scripts/serve.mjs",
+    "verify": "node scripts/verify.mjs",
+    "e2e": "node scripts/e2e.mjs",
+    "try": "node scripts/try.mjs"
+  },
+  "dependencies": {
+    "near-api-js": "^7.4.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.65.0"
+  }
+}

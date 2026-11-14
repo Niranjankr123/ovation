@@ -1,0 +1,9 @@
+[package]
+name = "ovation-rules"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+description = "Every rule Ovation applies to applause and money, as pure functions with no NEAR runtime. Run them with plain `cargo test`."
+
+[dependencies]
+serde_json = "1"

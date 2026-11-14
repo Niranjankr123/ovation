@@ -1,0 +1,32 @@
+{
+  "measured_at": "2026-11-11T10:10:43.310Z",
+  "source": "every DAO created by sputnik-dao.near, read over public RPC",
+  "left_out": [
+    "bridge-validator.sputnik-dao.near",
+    "nearweek-news-contribution.sputnik-dao.near",
+    "news.sputnik-dao.near"
+  ],
+  "daos_read": 2111,
+  "proposals_read": 67701,
+  "daos_that_paid_someone": 658,
+  "payouts": 24392,
+  "filed_by_the_account_paid": {
+    "count": 12763,
+    "percent": 52.3
+  },
+  "filed_by_a_member_who_voted_on_it": {
+    "count": 9136,
+    "percent": 37.5
+  },
+  "filed_by_someone_else": {
+    "count": 2493,
+    "percent": 10.2
+  },
+  "daos_with_10_or_more_payouts": 264,
+  "of_those": {
+    "where_nobody_ever_filed_for_someone_else": 108,
+    "where_under_a_tenth_were_filed_for_someone_else": 209,
+    "median_accounts_ever_paid": 14,
+    "median_share_of_payouts_to_the_most_paid_account_percent": 23
+  }
+}

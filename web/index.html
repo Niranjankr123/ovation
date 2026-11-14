@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ovation · applause that pays</title>
+    <meta name="description" content="Members of a Sputnik DAO applaud each other's work. Breadth of applause splits a budget the council approved, paid from the DAO's own treasury." />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C2412D'/%3E%3Cpath d='M9 21c2-6 12-6 14 0M6 17c3-10 17-10 20 0M12 24c1-3 7-3 8 0' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap top-row">
+        <a class="brand" href="#/" aria-label="Ovation home">
+          <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="var(--accent)" />
+            <path d="M9 21c2-6 12-6 14 0M6 17c3-10 17-10 20 0M12 24c1-3 7-3 8 0" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" />
+          </svg>
+          <span>Ovation</span>
+        </a>
+        <nav class="tabs" id="tabs" aria-label="Sections">
+          <a href="#/" data-tab="stage">Stage</a>
+          <a href="#/payouts" data-tab="payouts">Payouts</a>
+          <a href="#/people" data-tab="people">People</a>
+          <a href="#/feed" data-tab="feed">Feed</a>
+          <a href="#/install" data-tab="install">Install</a>
+          <a href="#/how" data-tab="how">How it works</a>
+        </nav>
+        <div class="who" id="who"></div>
+      </div>
+    </header>
+
+    <div class="banner" id="banner" hidden></div>
+
+    <main class="wrap" id="page">
+      <p class="loading">Reading NEAR testnet…</p>
+    </main>
+
+    <footer class="wrap foot" id="foot"></footer>
+    <div class="toasts" id="toasts" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
